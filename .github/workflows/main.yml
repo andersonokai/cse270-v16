@@ -43,12 +43,8 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Startup HTTP Server for pipeline tests
-      uses: Eun/http-server-action@v1.0.11
-      with:
-        directory: cse270/teton/1.6
-        port: 8000
-        index-files: |
-          ["index.html", "index.htm"]           
+      run: |
+        python -m http.server 5500 &
     - name: Run tests
       run: |
         pytest cse270/tests/test_smokeTest.py
