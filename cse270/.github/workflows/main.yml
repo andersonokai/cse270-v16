@@ -46,7 +46,7 @@ jobs:
       uses: Eun/http-server-action@v1.0.11
       with:
         directory: cse270/teton/1.6
-        port: 5500
+        port: 8000
         index-files: |
           ["index.html", "index.htm"]           
     - name: Run tests
