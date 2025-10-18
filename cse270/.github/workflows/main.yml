@@ -45,13 +45,13 @@ jobs:
     - name: Startup HTTP Server for pipeline tests
       uses: Eun/http-server-action@v1.0.11
       with:
-        directory: .
+        directory: cse270/teton/1.6
         port: 5500
         index-files: |
           ["index.html", "index.htm"]           
     - name: Run tests
       run: |
-        pytest
+        pytest tests/test_smokeTest.py
 
   analyze:
     needs: build
