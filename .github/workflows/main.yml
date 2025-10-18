@@ -51,7 +51,7 @@ jobs:
           ["index.html", "index.htm"]           
     - name: Run tests
       run: |
-        pytest tests/test_smokeTest.py
+        pytest cse270/tests/test_smokeTest.py
 
   analyze:
     needs: build
