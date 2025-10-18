@@ -20,7 +20,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
+# Define the jobs of the workflow
 jobs:
   build:
     runs-on: ubuntu-latest
